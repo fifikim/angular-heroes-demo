@@ -1,7 +1,42 @@
-<h1>{{title}}</h1>
-<nav>
-  <a routerLink="/dashboard">Dashboard</a>
-  <a routerLink="/heroes">Heroes</a>
-</nav>
-<router-outlet></router-outlet>
-<app-messages></app-messages>
+<div class="outer-container" fxLayout="column" fxFlexFill>
+
+  <div class="container header"
+    fxLayout
+    fxLayoutAlign="center center"
+    fxLayoutGap="10px"
+  >
+    <div class="title" fxFlex="60%" fxLayoutAlign="start start">
+      <a routerLink="/dashboard">
+        <h1>{{title}}</h1>
+      </a>
+    </div>
+
+    <div class="nav-bar" 
+      fxLayout 
+      fxLayoutGap="10px"
+    >
+      <div class="nav-link" fxFlex><a routerLink="/dashboard">Home</a></div>
+      <div class="nav-link" fxFlex><a routerLink="/heroes">View All</a></div>
+      <div class="nav-link" fxFlex><a routerLink="/create_hero">Create Hero</a></div>
+    </div>
+  </div>
+
+  <div class="container content"
+    fxLayout
+    fxLayoutAlign="center center"
+    fxLayoutGap="10px"
+    fxFlexOffset="auto"
+  >
+    <router-outlet></router-outlet>
+  </div>
+
+  <div class="container log"
+    fxLayout
+    fxLayoutAlign="center end"
+    fxLayoutGap="10px"
+    fxFlexOffset="auto"
+  >
+    <app-messages></app-messages>
+  </div>
+
+</div>

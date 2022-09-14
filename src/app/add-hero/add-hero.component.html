@@ -1,0 +1,14 @@
+<div fxLayout="column" fxLayoutAlign="center">
+  <div fxFlex fxLayoutAlign="center">
+    <h2>Create New Hero</h2>
+  </div>
+  <div fxFlex>
+    <label for="new-hero">Hero name: </label>
+    <input id="new-hero" #heroName />
+  </div>
+  <div fxFlex fxLayoutAlign="center">
+    <button type="button" class="add-button" (click)="add(heroName.value); heroName.value=''">
+      save
+    </button>
+  </div>
+</div>
